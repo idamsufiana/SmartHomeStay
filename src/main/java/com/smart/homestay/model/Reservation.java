@@ -30,4 +30,26 @@ public class Reservation {
     @Column(nullable = false)
     private ReservationStatus status;
 
+    /* =========================
+       FACILITIES (JOIN ENTITY)
+       ========================= */
+    @OneToMany(
+            mappedBy = "reservation",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<ReservationFacility> facilities = new ArrayList<>();
+
+    /* =========================
+       HELPER METHOD (IMPORTANT)
+       ========================= */
+    public void addFacility(ReservationFacility rf) {
+        rf.setReservation(this);
+        this.facilities.add(rf);
+    }
+
+    public void removeFacility(ReservationFacility rf) {
+        rf.setReservation(null);
+        this.facilities.remove(rf);
+    }
 }
