@@ -1,2 +1,4 @@
 # SmartHomeStay
-Smart HomeStay monolit version 
+Smart HomeStay monolith version 
+
+
