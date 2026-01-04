@@ -8,19 +8,23 @@ import com.smart.homestay.model.*;
 import com.smart.homestay.repository.FacilityRepository;
 import com.smart.homestay.repository.ReservationRepository;
 import com.smart.homestay.repository.RoomRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Objects;
 
 @Service
-@RequiredArgsConstructor
 public class ReservationService {
     private final RoomRepository roomRepository;
     private final FacilityRepository facilityRepository;
     private final ReservationRepository reservationRepository;
     private final EventPublisher eventPublisher;
+
+    public ReservationService(RoomRepository roomRepository, FacilityRepository facilityRepository, ReservationRepository reservationRepository, EventPublisher eventPublisher) {
+        this.roomRepository = roomRepository;
+        this.facilityRepository = facilityRepository;
+        this.reservationRepository = reservationRepository;
+        this.eventPublisher = eventPublisher;
+    }
 
     @Transactional
     public Reservation create(CreateReservationRequest req) {
