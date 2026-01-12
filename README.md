@@ -1,11 +1,11 @@
 # SmartHomeStay
 Smart HomeStay event driven microservice
 
-<img align="left" alt="GIF" src="https://github.com/idamsufiana/SmartHomeStay/blob/main/homestay.jpg?raw=true" />
+<img align="left" alt="SmartHomeStay" src="https://github.com/idamsufiana/SmartHomeStay/blob/main/homestay.jpg?raw=true" />
+
+<br clear="all" />
 
 ---
-#
-#
 ## 🟢 Reservation Events
 
 | Event Name            | Producer            | Consumers                          |
