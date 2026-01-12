@@ -6,9 +6,11 @@ Smart HomeStay event driven microservice
 
 
 
-Reservation Events
-Event Name	Producer	Consumers
-ReservationCreated	Reservation Service	Billing Service
-ReservationConfirmed	Reservation Service	Notification Service (optional)
-ReservationCancelled	Reservation Service	Billing Service
+## 🟢 Reservation Events
+
+| Event Name              | Producer             | Consumers                         |
+|-------------------------|----------------------|-----------------------------------|
+| ReservationCreated      | Reservation Service  | Billing Service                   |
+| ReservationConfirmed   | Reservation Service  | Notification Service *(optional)*  |
+| ReservationCancelled   | Reservation Service  | Billing Service                
 
