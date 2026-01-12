@@ -18,8 +18,8 @@ public class ReservationFacility {
     @ManyToOne(optional = false)
     private Reservation reservation;
 
-    @Column(nullable = false)
-    private Long facilityId;
+    @ManyToOne
+    private Facility facility;
 
     @Column(nullable = false)
     private String facilityNameSnapshot;
